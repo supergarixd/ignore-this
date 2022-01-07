@@ -3569,6 +3569,12 @@ UniversalExploits = {
 		Colour = Color3.fromRGB(48, 48, 48),
 		Code = "https://pastebin.com/raw/KduE9A6z"
 	},
+	fling2 = {
+		Name = "headfling",
+		Author = "alternative to the ultimate fling",
+		Colour = Color3.fromRGB(48, 48, 48),
+		Code = "https://raw.githubusercontent.com/supergarixd/ignore-this/main/dwas"
+	},
 
 }
 
