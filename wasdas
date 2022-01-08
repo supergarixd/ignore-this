@@ -5528,15 +5528,9 @@ function BootDomain()
 		})
 	end
 	if DOMAIN_ENABLED == true then
-		
-		Notify("Domain Hub X is in development, keep up to date in the Discord!","GothamBlack",Color3.fromRGB(0, 78, 115))
-		wait(0.3)
-		Notify("Running Domain Hub OpenSourced","GothamSemibold",Color3.fromRGB(154, 18, 222))
-		local Player = game.Players.LocalPlayer
-		
+
 		if table.find(Banned,Player.UserId) then
 			Notify("You have been banned from Domain V2, booting Domain V1","GothamBlack",Color3.fromRGB(170, 0, 0))
-			LoadDomainV1()
 			Domain.ToggleButton.Visible = false
 			enabled = false
 			wait(NotificationDuration + 2)
