@@ -3577,7 +3577,7 @@ UniversalExploits = {
 	},
 
 }
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
 function OpenSidebar()
 	db = true
 	Sidebaropen = true
@@ -5140,7 +5140,7 @@ function RePromptExploit(Exploit)
 		end
 	end)
 end
-loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+
 function UnRePromptExploit()
 	Domain.Other.ExploitFound:TweenPosition(UDim2.new(-26.5,0,0.299,0),"In","Quint",0.4)
 	pexploit = false
