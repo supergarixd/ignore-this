@@ -5512,7 +5512,7 @@ end
 	if DOMAIN_ENABLED == true then
 
 		if table.find(Banned,Player.UserId) then
-			Notify("You have been banned from Domain V2"GothamBlack",Color3.fromRGB(170, 0, 0))
+			Notify("You have been banned from Domain V2","GothamBlack",Color3.fromRGB(170, 0, 0))
 			Domain.ToggleButton.Visible = false
 			enabled = false
 			wait(NotificationDuration + 2)
@@ -5582,37 +5582,7 @@ end
 		OpenSidebar()
 	end
 	
-	for _, Player in ipairs(game.Players:GetChildren()) do
-		if game.Players.LocalPlayer:IsFriendsWith(Player.UserId) then
-			friendsingame = friendsingame - 1
-			Domain.amount_2.Text = friendsingame.." are in this game"	
-		end
-		if friendsingame == 0 then
-			Domain.amount_2.Text = "None are in this game"	
-		end
-	end
-		for _, exp in pairs(BackgroundExploits) do
 
-			for _, place in pairs(exp.PlaceIds) do
-				if place == game.PlaceId then
-					if exp.PremiumOnly == true then
-						if game.Players.LocalPlayer:IsInGroup(10220078) then
-							PromptExploit(exp)
-						end
-					else
-						PromptExploit(exp)
-					end
-				end
-			end
-		end
-		booteddomain = "false"
-		wait(4)
-		Notify("E","GothamBold",Color3.fromRGB(235, 0, 0))
-		LoadPlayers()
-	else
-		Notify("Domain is not enabled at this time, try again later!","GothamSemibold",Color3.fromRGB(184, 0, 0))
-	end
-end
 
 function getTime()
 	date = os.date("*t")
@@ -6111,4 +6081,4 @@ while true do
 	local picked_value = loldiscord[value]
 	Domain.SmallMessage.Text = picked_value
 end
-
+end
