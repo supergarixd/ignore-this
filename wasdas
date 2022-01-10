@@ -5762,7 +5762,7 @@ Domain.KeyFrame.Exit.MouseButton1Click:Connect(function()
 	Domain.Domain.Enabled = false
 end)
 else
-	BootDomain()
+	print("yeray es tonto")
 end
 
 Domain.Serverhop.MouseButton1Click:Connect(function()
