@@ -71,4 +71,5 @@ __newindex = hookmetamethod(game, "__newindex", function(t, k, v)
     return __newindex(t, k, v)
 end)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Pi-314Git/LunarSpirit/main/LunarDaHood.lua"))()
+getgenv().ChatLogs = true
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NBZion/scripts/main/Flare.lua", true))()
