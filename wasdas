@@ -3484,7 +3484,7 @@ BackgroundExploits = {
 		Loadstring = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt",
 	},
 	madcity = {
-		Name = "Bypass anty cheat",
+		Name = "Bypass anti cheat",
 		Description = "No more anticheat",
 		PlaceIds = {2788229376},
 		PremiumOnly = false,
