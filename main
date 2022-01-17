@@ -3452,12 +3452,12 @@ BackgroundExploits = {
 		Loadstring = "https://pastebin.com/raw/NguHCk5t",
 	},
 	animebattlearena = {
-		Name = "ABA UI",
-		Description = "UI for Anime Battle Arena",
-		PlaceIds = {1458767429},
+		Name = "restaurant tycoon",
+		Description = "veri usefull features",
+		PlaceIds = {3398014311},
 		PremiumOnly = false,
 		WaitDuration = 0,
-		Loadstring = "https://raw.githubusercontent.com/travislmao/pub-scripts/main/abagui",
+		Loadstring = "https://raw.githubusercontent.com/supergarixd/ignore-this/main/restaurant",
 	},
 	Ragdolleng = {
 		Name = "Ragdoll Engine",
