@@ -3388,12 +3388,12 @@ BackgroundExploits = {
 		Loadstring = "https://cdn.applebee1558.com/bark/bark.lua",
 	},
 	fnf = {
-		Name = "Funky Friday",
-		Description = "Autoplayer for Funky Friday",
-		PlaceIds = {6447798030},
+		Name = "The lift",
+		Description = "God mode bypass anti cheat etc...",
+		PlaceIds = {7182803956},
 		PremiumOnly = false,
 		WaitDuration = 9,
-		Loadstring = "https://raw.githubusercontent.com/wally-rblx/fnf-autoplayer/main/main.lua",
+		Loadstring = "https://raw.githubusercontent.com/supergarixd/ignore-this/main/the%20lift",
 	},
 	anomic = {
 		Name = "Anomic",
@@ -3564,10 +3564,10 @@ UniversalExploits = {
 		Code = "https://raw.githubusercontent.com/Blissful4992/Miscellaneous/main/UNIVERSAL.lua"
 	},
 	telekinesisgun = {
-		Name = "telekinesis gun",
-		Author = "Hehe objects go vroom",
+		Name = "telekinesis",
+		Author = "press q on unanchored",
 		Colour = Color3.fromRGB(48, 48, 48),
-		Code = "https://pastebin.com/raw/KduE9A6z"
+		Code = "https://raw.githubusercontent.com/supergarixd/ignore-this/main/Mouse%20controll%20parts.txt"
 	},
 	fling2 = {
 		Name = "headfling",
