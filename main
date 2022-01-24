@@ -3546,10 +3546,10 @@ UniversalExploits = {
 		Code = "https://raw.githubusercontent.com/supergarixd/cmd-x-moded/main/cmd-x",	
 	},
 	ezhub = {
-		Name = "hydroxide",
-		Author = "exploit making",
+		Name = "Fling animado",
+		Author = "animaciones chulas y fling",
 		Colour = Color3.fromRGB(0, 85, 127),
-		Code = "https://raw.githubusercontent.com/supergarixd/ignore-this/main/dwasda"
+		Code = "https://raw.githubusercontent.com/supergarixd/ignore-this/main/anim"
 	},
 	fling = {
 		Name = "Ultimate fling",
