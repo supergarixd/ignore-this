@@ -3389,11 +3389,11 @@ BackgroundExploits = {
 	},
 	fnf = {
 		Name = "The lift",
-		Description = "God mode bypass anti cheat etc...",
+		Description = "not working",
 		PlaceIds = {7182803956},
 		PremiumOnly = false,
 		WaitDuration = 9,
-		Loadstring = "https://raw.githubusercontent.com/supergarixd/ignore-this/main/the%20lift",
+		Loadstring = "",
 	},
 	anomic = {
 		Name = "Anomic",
