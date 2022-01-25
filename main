@@ -3544,12 +3544,7 @@ UniversalExploits = {
 		Author = "veri gud",
 		Colour = Color3.fromRGB(48, 48, 48),
 		Code = "https://raw.githubusercontent.com/supergarixd/ignore-this/main/w21as",	
-	},
-	ezhub = {
-		Name = "Fling a distancia",
-		Author = "fling a distancia muy chulo",
-		Colour = Color3.fromRGB(0, 85, 127),
-		Code = "https://raw.githubusercontent.com/supergarixd/ignore-this/main/anim"
+	
 	},
 	fling = {
 		Name = "Ultimate fling",
