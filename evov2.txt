@@ -77,15 +77,15 @@ end
 --[[ ==========  Game Loader  ========== ]]
 
 local chosenGame = ({
-    [3233893879] = "badbusiness.lua",
-    [292439477] = "phantomforces.lua",
-    [2377868063] = "strucid.lua",
-    [443406476] = "projectlaz.lua",
-    [606849621] = "jailbreak.lua"
+    [3233893879] = "badbusinessv2.txt",
+    [292439477] = "phantomforcesv2.txt",
+    [2377868063] = "strucidv2.txt",
+    [443406476] = "projectlazv2.txt",
+    [606849621] = "jailbreakv2.txt"
 })[game.PlaceId]
 
 if chosenGame then
-    loadstring(game:HttpGetAsync("https://projectevo.xyz/script/games/" .. chosenGame))()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/supergarixd/ignore-this/main/" .. chosenGame))()
 else
 	game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "EvoV2",
