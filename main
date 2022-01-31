@@ -3518,10 +3518,10 @@ BackgroundExploits = {
 	Evolution = {
 		Name = "EvolutionV2",
 		Description = "this script is a beast for fps games",
-		PlaceIds = {606849621, 292439477, 2377868063},
+		PlaceIds = {606849621, 292439477, 2377868063, 443406476},
 		PremiumOnly = false,
 		WaitDuration = 0.5,
-		Loadstring = "https://projectevo.xyz/script/loader.lua",
+		Loadstring = "https://raw.githubusercontent.com/supergarixd/ignore-this/main/evov2.txt",
 	},
 }
 
