@@ -11,7 +11,7 @@ sound.SoundId = "rbxassetid://216917652"
 sound.Parent = game:GetService("SoundService")
 sound:Play()
 
-teleport = false
+teleport = true
 
 wait()
 game.StarterGui:SetCore("SendNotification", {
