@@ -3484,8 +3484,8 @@ BackgroundExploits = {
 		Loadstring = "https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt",
 	},
 	madcity = {
-		Name = "Bypass anti cheat",
-		Description = "No more anticheat",
+		Name = "cool da hood gui",
+		Description = "ignore the ui",
 		PlaceIds = {2788229376},
 		PremiumOnly = false,
 		WaitDuration = 0,
