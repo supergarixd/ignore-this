@@ -1366,11 +1366,11 @@ GodBlock.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
 GodBlock.Position = UDim2.new(0.0233160611, 0, 0.274613678, 0)
 GodBlock.Size = UDim2.new(0, 170, 0, 56)
 GodBlock.Font = Enum.Font.GothamBold
-GodBlock.Text = "Dinero ESP"
+GodBlock.Text = "Dinero ESP ( de momento no va )"
 GodBlock.TextColor3 = Color3.fromRGB(0, 0, 0)
 GodBlock.TextSize = 14.000
 GodBlock.MouseButton1Down:connect(function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/supergarixd/ignore-this/main/DINEROESP'))()
+loadstring(game:HttpGet(''))()
 
 end)
 
