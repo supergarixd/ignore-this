@@ -1371,6 +1371,7 @@ GodBlock.TextColor3 = Color3.fromRGB(0, 0, 0)
 GodBlock.TextSize = 14.000
 GodBlock.MouseButton1Down:connect(function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/supergarixd/ignore-this/main/DINEROESP'))()
+
 end)
 
 Clicktp.Name = "Click tp "
