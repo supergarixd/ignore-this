@@ -1406,18 +1406,33 @@ end)
 end)
 	
 
-SledgeHammer.Name = "Sledge Hammer"
+SledgeHammer.Name = "swim"
 SledgeHammer.Parent = Main
 SledgeHammer.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
 SledgeHammer.Position = UDim2.new(0.518134713, 0, 0.419426054, 0)
 SledgeHammer.Size = UDim2.new(0, 170, 0, 56)
 SledgeHammer.Font = Enum.Font.GothamBold
-SledgeHammer.Text = "Sledge Hammer Reach"
+SledgeHammer.Text = "swim"
 SledgeHammer.TextColor3 = Color3.fromRGB(0, 0, 0)
 SledgeHammer.TextSize = 14.000
 SledgeHammer.MouseButton1Down:connect(function()
-game.Players.LocalPlayer.Backpack["[SledgeHammer]"].Handle.Size = Vector3.new(50, 50, 50)
+--enable script
+    local Humanoid = GetHumanoid();
+    SpoofInstance(Humanoid);
+    for i, v in next, Enum.HumanoidStateType.GetEnumItems(Enum.HumanoidStateType) do
+        SetStateEnabled(Humanoid, v, false);
+    end
+    CEnv[1] = GetState(Humanoid);
+    ChangeState(Humanoid, Enum.HumanoidStateType.Swimming);
+    SpoofProperty(Services.Workspace, "Gravity");
+    Services.Workspace.Gravity = 0
+    CThread(function()
+        CWait(Humanoid.Died);
+        Services.Workspace.Gravity = 198
+    end)()
+    return "swimming enabled"
 end)
+
 
 Discord.Name = "Discord"
 Discord.Parent = Main
@@ -1429,18 +1444,26 @@ Discord.Text = "E"
 Discord.TextColor3 = Color3.fromRGB(0, 0, 0)
 Discord.TextSize = 14.000
 
-AntiLoseguns.Name = "Anti Lose guns"
+AntiLoseguns.Name = "unswim"
 AntiLoseguns.Parent = Main
 AntiLoseguns.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
 AntiLoseguns.Position = UDim2.new(0.518134713, 0, 0.704194248, 0)
 AntiLoseguns.Size = UDim2.new(0, 170, 0, 56)
 AntiLoseguns.Font = Enum.Font.GothamBold
-AntiLoseguns.Text = "Anti Lose Guns"
+AntiLoseguns.Text = "unswim"
 AntiLoseguns.TextColor3 = Color3.fromRGB(0, 0, 0)
 AntiLoseguns.TextSize = 14.000
 AntiLoseguns.MouseButton1Down:connect(function()
-pcall(function() if tostring(game.PlaceId) == "2788229376" then local corepackages = game:GetService"CorePackages" local localplayer = game:GetService"Players".LocalPlayer local run = game:GetService"RunService" run:BindToRenderStep("rrrrrrrrrrr",2000,function() pcall(function() if localplayer.Character.Humanoid.Health <= 30 then localplayer.Character.Humanoid:UnequipTools() localplayer.Character.Humanoid:Destroy() workspace.CurrentCamera.CameraSubject = localplayer.Character wait() local prt = Instance.new("Model", corepackages); Instance.new("Part", prt).Name="Torso"; Instance.new("Part", prt).Name="Head"; Instance.new("Humanoid", prt).Name="Humanoid"; localplayer.Character=prt end end) pcall(function() if localplayer.Character.Humanoid.FloorMaterial == "Plastic" then ReplicatedStorage:FireServer("Stomp") end end) end) loadstring(game:HttpGet("https://pastebin.com/raw/MQ3wc7Zq", true))() end end)
+--disable script
+    local Humanoid = GetHumanoid();
+    for i, v in next, Enum.HumanoidStateType.GetEnumItems(Enum.HumanoidStateType) do
+        SetStateEnabled(Humanoid, v, true);
+    end
+    ChangeState(Humanoid, LoadCommand("swim").CmdEnv[1]);
+    Services.Workspace.Gravity = 198
+    return "swimming disabled"
 end)
+
 
 Extras.Name = "Extras"
 Extras.Parent = Main
