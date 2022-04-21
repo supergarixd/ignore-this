@@ -1,0 +1,26 @@
+--enable script
+    local Humanoid = GetHumanoid();
+    SpoofInstance(Humanoid);
+    for i, v in next, Enum.HumanoidStateType.GetEnumItems(Enum.HumanoidStateType) do
+        SetStateEnabled(Humanoid, v, false);
+    end
+    CEnv[1] = GetState(Humanoid);
+    ChangeState(Humanoid, Enum.HumanoidStateType.Swimming);
+    SpoofProperty(Services.Workspace, "Gravity");
+    Services.Workspace.Gravity = 0
+    CThread(function()
+        CWait(Humanoid.Died);
+        Services.Workspace.Gravity = 198
+    end)()
+    return "swimming enabled"
+end)
+
+--disable script
+    local Humanoid = GetHumanoid();
+    for i, v in next, Enum.HumanoidStateType.GetEnumItems(Enum.HumanoidStateType) do
+        SetStateEnabled(Humanoid, v, true);
+    end
+    ChangeState(Humanoid, LoadCommand("swim").CmdEnv[1]);
+    Services.Workspace.Gravity = 198
+    return "swimming disabled"
+end)
