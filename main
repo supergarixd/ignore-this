@@ -3565,10 +3565,10 @@ UniversalExploits = {
 		Code = "https://raw.githubusercontent.com/supergarixd/ignore-this/main/Mouse%20controll%20parts.txt"
 	},
 	fling2 = {
-		Name = "headfling",
-		Author = "alternative to the ultimate fling",
+		Name = "Victim menu",
+		Author = "Too op",
 		Colour = Color3.fromRGB(48, 48, 48),
-		Code = "https://raw.githubusercontent.com/supergarixd/ignore-this/main/dwas"
+		Code = "https://raw.githubusercontent.com/supergarixd/ignore-this/main/victim%20menu"
 	},
 
 }
