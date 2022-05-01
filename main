@@ -3559,10 +3559,10 @@ UniversalExploits = {
 		Code = "https://raw.githubusercontent.com/Blissful4992/Miscellaneous/main/UNIVERSAL.lua"
 	},
 	telekinesisgun = {
-		Name = "telekinesis",
-		Author = "press q on unanchored",
+		Name = "SYNTAX V3",
+		Author = "KEY IS SyntaxV3Free",
 		Colour = Color3.fromRGB(48, 48, 48),
-		Code = "https://raw.githubusercontent.com/supergarixd/ignore-this/main/Mouse%20controll%20parts.txt"
+		Code = "https://raw.githubusercontent.com/supergarixd/ignore-this/main/Syntaxv3.txt"
 	},
 	fling2 = {
 		Name = "Victim menu",
