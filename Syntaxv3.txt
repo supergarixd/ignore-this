@@ -18,7 +18,7 @@ shared.transparency = {
     Glow = 0.5,
     TabList = 0,
     Scripts = 1,
-
+}
 
 --[[
 -Syntax v3 Free Version Hats
