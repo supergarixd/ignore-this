@@ -5592,15 +5592,6 @@ end
 				end
 			end
 		end
-		booteddomain = "true"
-		wait(4)
-		Notify("SHLEX DISCORD HAS BEEN DELETED! Please rejoin! Find the link in the About tab","GothamBold",Color3.fromRGB(235, 0, 0))
-		LoadPlayers()
-	else
-		Notify("Domain is not enabled at this time, try again later!","GothamSemibold",Color3.fromRGB(184, 0, 0))
-	end
-end
-
 function getTime()
 	date = os.date("*t")
 	return ("%02d:%02d"):format(((date.hour % 24) - 1) % 12 + 1, date.min)
