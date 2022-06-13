@@ -3,7 +3,9 @@ strings-override
 Domain V2, by Shlex
 ]]
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
 
+wait (2)
 
 
 AutoExecute = false
@@ -6094,4 +6096,3 @@ end
 
 
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
