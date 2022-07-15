@@ -3,12 +3,73 @@ strings-override
 Domain V2, by Shlex
 ]]
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+
+wait (2)
+
+-- // Constants \\ --
+-- [ Services ] --
+local Services = setmetatable({}, {__index = function(Self, Index)
+local NewService = game.GetService(game, Index)
+if NewService then
+Self[Index] = NewService
+end
+return NewService
+end})
+
+-- [ LocalPlayer ] --
+local LocalPlayer = Services.Players.LocalPlayer
+
+-- // Functions \\ --
+local function PlayerAdded(Player)
+   local Detected = false
+   local Character;
+   local PrimaryPart;
+
+   local function CharacterAdded(NewCharacter)
+       Character = NewCharacter
+       repeat
+           wait()
+           PrimaryPart = NewCharacter:FindFirstChild("HumanoidRootPart")
+       until PrimaryPart
+       Detected = false
+   end
+
+   CharacterAdded(Player.Character or Player.CharacterAdded:Wait())
+   Player.CharacterAdded:Connect(CharacterAdded)
+   Services.RunService.Heartbeat:Connect(function()
+       if (Character and Character:IsDescendantOf(workspace)) and (PrimaryPart and PrimaryPart:IsDescendantOf(Character)) then
+           if PrimaryPart.AssemblyAngularVelocity.Magnitude > 50 or PrimaryPart.AssemblyLinearVelocity.Magnitude > 100 then
+               if Detected == false then
+                   game.StarterGui:SetCore("ChatMakeSystemMessage", {
+                       Text = "Fling Exploit detected, Player: " .. tostring(Player);
+                       Color = Color3.fromRGB(255, 200, 0);
+                   })
+               end
+               Detected = true
+               for i,v in ipairs(Character:GetDescendants()) do
+                   if v:IsA("BasePart") then
+                       v.CanCollide = false
+                       v.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
+                       v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+                       v.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0)
+                   end
+               end
+               PrimaryPart.CanCollide = false
+               PrimaryPart.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
+               PrimaryPart.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
+               PrimaryPart.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0)
+           end
+       end
+   end)
+end
+
+wait(1)
 
 
-
-AutoExecute = true
+AutoExecute = false
 if not game:IsLoaded() then
-	local loadtext = "Mochi hub is waiting on the game to load"
+	local loadtext = "Domain Hub is waiting on the game to load"
 	
 	local dmnwait = Instance.new("ScreenGui")
 	local main = Instance.new("Frame")
@@ -49,6 +110,7 @@ if not game:IsLoaded() then
 	dmnwait:Destroy()
 	repeat wait() until game:IsLoaded() 
 end
+
 
 
 
@@ -2086,7 +2148,7 @@ Domain.About_3.Position = UDim2.new(0.0371906646, 0, 0.25850603, 0)
 Domain.About_3.Size = UDim2.new(0.909608364, 0, 0.0326033197, 0)
 Domain.About_3.ZIndex = 1002
 Domain.About_3.Font = Enum.Font.GothamBlack
-Domain.About_3.Text = "Discord Server (no workie)"
+Domain.About_3.Text = "Discord Server"
 Domain.About_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 Domain.About_3.TextScaled = true
 Domain.About_3.TextSize = 14.000
@@ -2104,7 +2166,7 @@ Domain.Link.Position = UDim2.new(0.0371906608, 0, 0.295184523, 0)
 Domain.Link.Size = UDim2.new(0.620413125, 0, 0.0326033197, 0)
 Domain.Link.ZIndex = 1002
 Domain.Link.Font = Enum.Font.GothamBold
-Domain.Link.Text = "nothing to see here"
+Domain.Link.Text = "discord.gg/jyySpgkFSp"
 Domain.Link.TextColor3 = Color3.fromRGB(255, 255, 255)
 Domain.Link.TextScaled = true
 Domain.Link.TextSize = 14.000
@@ -2140,7 +2202,7 @@ Domain.About_5.Position = UDim2.new(0.0428941995, 0, 0.876436234, 0)
 Domain.About_5.Size = UDim2.new(0.829617858, 0, 0.0626301542, 0)
 Domain.About_5.ZIndex = 1002
 Domain.About_5.Font = Enum.Font.GothamBlack
-Domain.About_5.Text = "Some features use code from Infinite Yield by Edge and are modified by mochi"
+Domain.About_5.Text = "Some features use code from Infinite Yield by Edge"
 Domain.About_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 Domain.About_5.TextScaled = true
 Domain.About_5.TextSize = 14.000
@@ -2509,7 +2571,7 @@ Domain.text.BorderSizePixel = 0
 Domain.text.Position = UDim2.new(0.0500941612, 0, 0.0779062882, 0)
 Domain.text.Size = UDim2.new(0.74847132, 0, 0.350369573, 0)
 Domain.text.Font = Enum.Font.GothamBold
-Domain.text.Text = "Enjoying Domain? pay mochi so he can do some more shit"
+Domain.text.Text = "Enjoying Domain? Join our Discord for updates and news on the latest releases"
 Domain.text.TextColor3 = Color3.fromRGB(255, 255, 255)
 Domain.text.TextScaled = true
 Domain.text.TextSize = 14.000
@@ -2529,7 +2591,7 @@ Domain.link.Position = UDim2.new(0.0500941612, 0, 0.465457529, 0)
 Domain.link.Size = UDim2.new(0.859486938, 0, 0.108649939, 0)
 Domain.link.ZIndex = 100
 Domain.link.Font = Enum.Font.GothamSemibold
-Domain.link.Text = "nothing in here"
+Domain.link.Text = "discord.gg/2enfwef"
 Domain.link.TextColor3 = Color3.fromRGB(255, 255, 255)
 Domain.link.TextScaled = true
 Domain.link.TextSize = 14.000
@@ -2690,7 +2752,7 @@ Domain.text_4.BorderSizePixel = 0
 Domain.text_4.Position = UDim2.new(0.0500943139, 0, 0.136186719, 0)
 Domain.text_4.Size = UDim2.new(0.74847132, 0, 0.0607353151, 0)
 Domain.text_4.Font = Enum.Font.GothamSemibold
-Domain.text_4.Text = "Magnius (tf is that)"
+Domain.text_4.Text = "Magnius"
 Domain.text_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 Domain.text_4.TextScaled = true
 Domain.text_4.TextSize = 14.000
@@ -2722,7 +2784,7 @@ Domain.text_6.BorderSizePixel = 0
 Domain.text_6.Position = UDim2.new(0.0500943139, 0, 0.282426566, 0)
 Domain.text_6.Size = UDim2.new(0.74847132, 0, 0.0607353151, 0)
 Domain.text_6.Font = Enum.Font.GothamSemibold
-Domain.text_6.Text = "free bad executor (KRNL)"
+Domain.text_6.Text = "KRNL"
 Domain.text_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 Domain.text_6.TextScaled = true
 Domain.text_6.TextSize = 14.000
@@ -2738,7 +2800,7 @@ Domain.text_7.BorderSizePixel = 0
 Domain.text_7.Position = UDim2.new(0.0500943139, 0, 0.357330024, 0)
 Domain.text_7.Size = UDim2.new(0.74847132, 0, 0.0607353151, 0)
 Domain.text_7.Font = Enum.Font.GothamSemibold
-Domain.text_7.Text = "bad free executor (Fluxus)"
+Domain.text_7.Text = "Fluxus"
 Domain.text_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 Domain.text_7.TextScaled = true
 Domain.text_7.TextSize = 14.000
@@ -3264,7 +3326,7 @@ NotificationDuration = 7
 ReleaseType = "Release"
 Release = 1.4
 ReleaseFeature = "Discord Update"
-DiscordLink = ""
+DiscordLink = "discord.gg/BQ5tjBEhw5"
 DomainPass = 16104485
 
 bindable = Instance.new("BindableEvent")
@@ -3276,7 +3338,7 @@ enabled = true
 Sidebaropen = false
 UIS = game:GetService("UserInputService")
 db = false
-antikick = false
+antikick = true
 UIsEnabled = {}
 friendsingame = 0
 CurrentListPosition = 1
@@ -3334,7 +3396,7 @@ Admins = {669686927,76237634,89779573,37962366,1984655763,262635913,1015797562,7
 Showcasers = {434928087,1598108139,2325926644,254782537,261882701,839408951,2403423571,941788712}
 Banned = {17241083,26892987,20655358,10516000,660242324,225493776}
 Developers = {304343782}
-loldiscord = {"no"}
+loldiscord = {"dude this is so cool","Domain","showcase this","watch this space","bruh","use magnius - rexi","domain winning","make it trending on twitter","oops","if this isnt in your auto exec, i will find you","preparing for lift off","dababy car","underrated","sirmeme make a video on domain hub","you know how i be, i just poopin","this table is long dude","discord.gg/shlex","boost the server damn it","pog champ","imagine trying to crack domain hub"}
 
 Beta = {0}
 AntiExploits = {
@@ -3572,7 +3634,7 @@ UniversalExploits = {
 	},
 
 }
-loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+
 function OpenSidebar()
 	db = true
 	Sidebaropen = true
@@ -4425,6 +4487,7 @@ function BeginFly()
 		end)
 		Flyv2()
 end
+
 function Serverhop()
 	local x = {}
 	for _, v in ipairs(game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100")).data) do
@@ -5273,7 +5336,7 @@ function GlitchTransition()
 	Discord.Size = UDim2.new(0.733908772, 0, 0.0731824785, 0)
 	Discord.ZIndex = 2
 	Discord.Font = Enum.Font.GothamBlack
-	Discord.Text = "fuck u"
+	Discord.Text = "discord.gg/shlex"
 	Discord.TextColor3 = Color3.fromRGB(235, 235, 235)
 	Discord.TextScaled = true
 	Discord.TextSize = 14.000
@@ -5503,15 +5566,6 @@ function GlitchTransition()
 	loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexsoftworks/Domainx/main/source'),true))()
 end
 
-	if DOMAIN_ENABLED == true then
-
-		if table.find(Banned,Player.UserId) then
-			Notify("You have been banned from Domain V2","GothamBlack",Color3.fromRGB(170, 0, 0))
-			Domain.ToggleButton.Visible = false
-			enabled = false
-			wait(NotificationDuration + 2)
-			Domain.Domain:Destroy()
-		end
 		
 	Load()
 	loadwidgets()
@@ -5576,8 +5630,29 @@ end
 		OpenSidebar()
 	end
 	
+	for _, Player in ipairs(game.Players:GetChildren()) do
+		if game.Players.LocalPlayer:IsFriendsWith(Player.UserId) then
+			friendsingame = friendsingame - 1
+			Domain.amount_2.Text = friendsingame.." are in this game"	
+		end
+		if friendsingame == 0 then
+			Domain.amount_2.Text = "None are in this game"	
+		end
+	end
+		for _, exp in pairs(BackgroundExploits) do
 
-
+			for _, place in pairs(exp.PlaceIds) do
+				if place == game.PlaceId then
+					if exp.PremiumOnly == true then
+						if game.Players.LocalPlayer:IsInGroup(10220078) then
+							PromptExploit(exp)
+						end
+					else
+						PromptExploit(exp)
+					end
+				end
+			end
+		end
 function getTime()
 	date = os.date("*t")
 	return ("%02d:%02d"):format(((date.hour % 24) - 1) % 12 + 1, date.min)
@@ -5756,7 +5831,7 @@ Domain.KeyFrame.Exit.MouseButton1Click:Connect(function()
 	Domain.Domain.Enabled = false
 end)
 else
-	print("yeray es tonto")
+	BootDomain()
 end
 
 Domain.Serverhop.MouseButton1Click:Connect(function()
@@ -6075,4 +6150,6 @@ while true do
 	local picked_value = loldiscord[value]
 	Domain.SmallMessage.Text = picked_value
 end
-end
+
+
+
