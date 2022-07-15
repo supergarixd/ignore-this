@@ -4823,18 +4823,6 @@ AddCommand("httplogs", {"httpspy"}, "enables httpspy", {}, function()
             })
         end
     end
-    AddCommand("vape", {"vape"}, "loads vape", {}, function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua"))();
-        end
-    end
-    AddCommand("antifling", {"antifling"}, "loads anti fling", {}, function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/supergarixd/ignore-this/main/Anti%20Fling"))();
-        end
-    end
-    AddCommand("neeko", {"neeko"}, "loads neeko maid", {}, function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/supergarixd/ignore-this/main/neeko"))();
-        end
-    end
 
     local HttpLogsListLayout = HttpLogs.Frame.List.UIListLayout
 
